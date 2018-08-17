@@ -27,6 +27,7 @@ object Publisher {
         PublishFailed("Validation error", l)
 
       case Right(v) =>
+        System.out.println("What ever");
         val address = v.validatedAddress.address + "/pacts/provider/" + v.providerName + "/consumer/" + v.consumerName + "/version/" + versionToPublishAs
           .replace("-SNAPSHOT", ".x")
 
